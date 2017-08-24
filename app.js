@@ -29,11 +29,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.options('*', cors());
 // Allow requests from any localhost -- on any port
-// const corsHostnameWhitelist = [/http:\/\/localhost(?::\d{1,5})?$/,
-//                                /https:\/\/idkeats\.github\.io/,
-//                                /http:\/\/127.0.0.1(?::\d{1,5})?$/];
-// Allow requests only from github
-const corsHostnameWhitelist = [/https:\/\/idkeats\.github\.io/];
+const corsHostnameWhitelist = [/http:\/\/localhost(?::\d{1,5})?$/,
+                               /https:\/\/idkeats\.github\.io/,
+                               /http:\/\/127.0.0.1(?::\d{1,5})?$/];
 app.use(cors({
   origin: corsHostnameWhitelist
 }))

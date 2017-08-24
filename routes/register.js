@@ -5,9 +5,10 @@ const User = mongoose.model('User');
 
 /* Redirect to landing page */
 router.get('/', (req, res, next) => {
-  User.find({})
-    .then(users => res.status(200).json(users))
-    .catch(err => res.status(400).json({message: "Error retrieving user data.", err}));
+  // User.find({})
+  //   .then(users => res.status(200).json(users))
+  //   .catch(err => res.status(400).json({message: "Error retrieving user data.", err}));
+  res.redirect('https://idkeats.github.io');
 });
 
 router.post('/', (req, res, next) => {
