@@ -10,6 +10,7 @@
   const maxCharacters = document.getElementById('maxCharacters');
 
   messageInput.textContent = '';
+  submitButton.disabled = true;
 
   nameInput.addEventListener('blur', function(event){
     const myName = nameInput.value;
@@ -80,6 +81,7 @@
 
     if(name) {
       // Mark open model here
+      document.querySelector('#registered-user').textContent = name;
     }
   }
 }());

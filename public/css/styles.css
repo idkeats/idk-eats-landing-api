@@ -70,9 +70,13 @@ body::-webkit-scrollbar-thumb {
   justify-content: space-around;
 }
 
+.form-row {
+  clear: both;
+}
+
 .form-container {
   background-color: #F2F2F2;
-  margin: 150px 0 75px;
+  margin: 10px 0 75px;
   padding: 20px;
   border-bottom: 4px solid #FF4E4A;
 }
@@ -131,8 +135,44 @@ body::-webkit-scrollbar-thumb {
 }
 
 .social-link {
-  display: block;
-  margin: 5px;
+  color: #FF6F68;
+}
+
+.social-link:hover, .social-link:focus, .social-link:visited {
+  color: #FF4E4A;
+  text-decoration: none;
+}
+
+.confirmation-modal {
+  border-radius: 0px;
+  border-bottom: 4px solid #FF4E4A;
+}
+
+.confirmation-modal .modal-content {
+  border-radius: 0px;
+}
+
+.confirmation-modal_header {
+  background-color: #FF4E4A;
+  padding: 0 15px;
+}
+
+.confirmation-modal_logo {
+  height: 56px;
+}
+
+.confirmation-modal_header button.close {
+  height: 56px;
+  opacity: 1
+}
+
+.confirmation-modal_header button.close:focus {
+  outline: -webkit-focus-ring-color auto 0px;
+}
+
+.confirmation-modal_header button span {
+  font-size: 50px;
+  color: #eeeeee;
 }
 
 @media only screen and (max-width: 420px) {
@@ -146,12 +186,12 @@ body::-webkit-scrollbar-thumb {
   .logo-container .logo {
     width: 200px;
     height: 200px;
-    margin-top: 50px;
+    margin-top: 30px;
   }
 
   .form-container {
     background-color: #eeeeee;
-    margin: 55px 0 0;
+    margin: 0;
     padding: 15px;
     border-bottom: 0px solid #FF4E4A;
   }

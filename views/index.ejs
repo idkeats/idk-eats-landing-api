@@ -10,15 +10,21 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="https://use.fontawesome.com/81068ff9e5.js"></script>
 </head>
 <body>
   <div class="container-fluid">
     <div class="row logo-container">
       <div class="logo"></div>
+      <div class="col-xs-12 text-center">
+        <a class="social-link" href="https://www.facebook.com/idkeats/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i> #idkeats</a>
+      </div>
     </div>
     <div class="row flex-container center form-row">
       <div class="col-xs-12 col-sm-9 col-md-8 form-container">
-        <h1>Sign up to get an exclusive first look at IDK Eats!</h1>
+        <div class="text-center">
+          <h1>Sign up to get an exclusive first look at IDK Eats!</h1>
+        </div>
         <form class="contact-form" id="emailForm" method="POST">
           <div class="form-group">
             <label class="contact_form-label" for="name">Full Name</label>
@@ -45,7 +51,7 @@
                       draggable="false"
                       maxlength="350">
             </textarea>
-            <p class="max-char" id="maxCharacters">200</p>
+            <p class="max-char" id="maxCharacters">350</p>
             <input type="hidden" 
                   name="_gotcha"
                   id="hiddenInput"/>
@@ -53,11 +59,39 @@
           <div class="col-xs-12 text-center">
             <button class="btn btn-lg btn-link submit-btn"
             type="submit"
+            data-toggle="modal" 
+            data-target="#myModal"
             id="submitButton">
                 Submit
             </button>
           </div>
         </form>
+      </div>
+    </div>
+  </div>
+  <!-- Button trigger modal -->
+  <!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    Launch demo modal
+  </button> -->
+
+  <!-- Modal -->
+  <div class="modal fade confirmation-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header confirmation-modal_header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <img src="../images/idk-plaid-logo-sticker.png" alt="" class="modal-title confirmation-modal_logo">
+          <!-- <h4 class="modal-title" id="myModalLabel">Modal title</h4> -->
+        </div>
+        <div class="modal-body">
+          <h1>Hi <span id="registered-user"></span>!</h1>
+          <h3>Thank you for registering for IDK Eats! : )</h3>
+          <p>As a pre-release member, you are a VIP! What does that mean? As we role out awesome new features, you will get exclusive first access! We will also be tossing you some super sweet rewards along the way. Be sure to keep up with everything IDK Eats via our <a href="https://www.facebook.com/idkeats/" target="_blank">Facebook page</a>, and look out for periodical emails letting you know what we are up to, and when we will be officially launching!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
       </div>
     </div>
   </div>
