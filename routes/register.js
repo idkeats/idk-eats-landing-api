@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const User = mongoose.model('User');
-const mongooseHelpers = require('../modules/mongooseHelpers');
+//const mongooseHelpers = require('../modules/mongooseHelpers');
 
 /* Redirect to landing page */
 router.get('/', (req, res, next) => {

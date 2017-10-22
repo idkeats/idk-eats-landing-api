@@ -13,7 +13,7 @@ db.init();
 
 var index = require('./routes/index');
 var register = require('./routes/register');
-var movies = require('./routes/movie');
+var movies = require('./routes/movies');
 
 
 // view engine setup
