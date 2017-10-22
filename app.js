@@ -13,6 +13,7 @@ db.init();
 
 var index = require('./routes/index');
 var register = require('./routes/register');
+var movies = require('./routes/movie');
 
 
 // view engine setup
@@ -38,6 +39,7 @@ app.use(cors({
 
 app.use('/', index);
 app.use('/register', register);
+app.use('/movies', movies);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
